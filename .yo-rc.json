@@ -1,0 +1,9 @@
+{
+  "generator-wix-js": {
+    "promptValues": {
+      "authorName": "Amit_Kaspi",
+      "authorEmail": "akaspi@wix.com",
+      "groupId": "com.wixpress.editor"
+    }
+  }
+}
