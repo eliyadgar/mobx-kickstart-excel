@@ -12,7 +12,7 @@ class Cell extends React.Component {
 
         this.isSelected = computed(() => {
             return excelStore.isCellSelected(this.props.rowIndex, this.props.cellIndex);
-        });
+        }, {name: `isCellSelected(${this.props.rowIndex},${this.props.cellIndex})`});
 
         this.onClick = this.onClick.bind(this);
     }

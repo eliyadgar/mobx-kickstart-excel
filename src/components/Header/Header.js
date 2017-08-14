@@ -6,7 +6,7 @@ function Header() {
   return (
       <tr>
           <td />
-          { _.times(10, i => <th>{String.fromCharCode(i + 'A'.charCodeAt(0))}</th>) }
+          { _.times(10, i => <th key={i}>{String.fromCharCode(i + 'A'.charCodeAt(0))}</th>) }
       </tr>
   );
 }
