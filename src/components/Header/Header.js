@@ -1,10 +1,9 @@
 import React from 'react';
 import s from './Header.scss';
-import _ from 'lodash';
 
 function Header() {
   return (
-      <tr>
+      <tr className={s.tableHeader}>
           <td />
           { _.times(10, i => <th key={i}>{String.fromCharCode(i + 'A'.charCodeAt(0))}</th>) }
       </tr>

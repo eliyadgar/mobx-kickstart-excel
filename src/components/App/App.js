@@ -9,11 +9,11 @@ import FormulaEditor from '../FormulaEditor';
 
 function App() {
     return (
-        <div>
+        <div className={s.root}>
             <FormulaEditor />
             <table className={s.table}>
                 <tbody>
-                <Header/>
+                    <Header/>
                     {_.times(10, rowIndex => <Row key={rowIndex} rowIndex={rowIndex}/>)}
                 </tbody>
             </table>

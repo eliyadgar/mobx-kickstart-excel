@@ -51,9 +51,12 @@ InputWithState.propTypes = {
 };
 
 const FormulaEditor = () => (
-    <InputWithState value={excelStore.selectedCellData}
-                    onChange={(newData) => excelStore.setSelectedCellData(newData)}
-    />
+    <div className={s.formulaEditor}>
+        Formula:
+        <InputWithState value={excelStore.selectedCellData}
+                        onChange={(newData) => excelStore.setSelectedCellData(newData)}
+        />
+    </div>
 );
 
 export default observer(FormulaEditor);

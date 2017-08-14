@@ -1,6 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  font-family: arial;
+}
+
 .table {
-  border: 1px solid;
-  //width: 980px;
+  border-collapse: collapse;
   margin: 0 auto;
   text-align: center;
+
+  th {
+    font-weight: normal;
+    font-size: 12px;
+    padding: 10px;
+  }
 }
