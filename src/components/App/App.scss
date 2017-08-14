@@ -1,18 +1,21 @@
-.table {
-  border: 1px solid;
-  //width: 980px;
-  margin: 0 auto;
-  text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-.formula-input {
-  width: 1060px;
-  display: block;
-  margin: 2em auto;
-  padding: 0.5em 0.25em;
-  border: none;
-  border-radius: 0.2em;
+.root {
+  font-family: arial;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0.1em 0.05em rgba(0,0,0,0.3);
-  box-sizing: border-box;
+
+  th {
+    font-weight: normal;
+    font-size: 12px;
+    padding: 10px;
+  }
 }
