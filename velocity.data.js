@@ -5,7 +5,7 @@ const experiments = {
 };
 
 module.exports = {
-  title: 'Wix Stack React Example Application',
+  title: 'MobX KickStart Excel',
   debug: true,
   experiments: JSON.stringify(experiments),
   locale: 'en',

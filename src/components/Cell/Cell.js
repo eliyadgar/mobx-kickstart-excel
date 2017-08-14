@@ -4,7 +4,7 @@ import s from './Cell.scss';
 
 function Cell({rowIndex, cellIndex}) {
   return (
-      <td>{rowIndex},{cellIndex}</td>
+      <td className={s.cell}></td>
   );
 }
 

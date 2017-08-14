@@ -1,14 +1,18 @@
-.root {
+.table {
+  border: 1px solid;
+  //width: 980px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.header {
-  background-color: #222;
-  padding: 10px;
-  color: white;
-  font-size: 20pt;
-}
-
-.intro {
-  font-size: 15pt;
+.formula-input {
+  width: 1060px;
+  display: block;
+  margin: 2em auto;
+  padding: 0.5em 0.25em;
+  border: none;
+  border-radius: 0.2em;
+  text-align: center;
+  box-shadow: 0 0 0.1em 0.05em rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }

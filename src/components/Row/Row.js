@@ -7,6 +7,7 @@ import Cell from '../Cell';
 function Row({rowIndex}) {
   return (
       <tr>
+          <th>{rowIndex + 1}</th>
           { _.times(10, cellIndex => <Cell key={cellIndex} rowIndex={rowIndex} cellIndex={cellIndex} />) }
       </tr>
   );
