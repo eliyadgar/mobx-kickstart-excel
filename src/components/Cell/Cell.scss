@@ -1,5 +1,10 @@
 .cell {
-  border: 1px solid;
+  border: 1px solid black;
   width: 100px;
   height: 30px;
+}
+
+.selected-cell {
+  border: 1px solid dodgerblue;
+  background-color: beige;
 }
