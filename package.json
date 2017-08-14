@@ -9,13 +9,7 @@
     "url": ""
   },
   "scripts": {
-    "start": "yoshi start --entry-point=./test/mock/start-fake-server.js",
-    "build": ":",
-    "precommit": "yoshi lint",
-    "pretest": "yoshi build",
-    "test": "yoshi test",
-    "posttest": "yoshi lint",
-    "release": "yoshi release"
+    "start": "yoshi start --entry-point=./test/mock/start-fake-server.js"
   },
   "yoshi": {
     "entry": "./app.js"

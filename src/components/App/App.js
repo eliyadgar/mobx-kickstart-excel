@@ -1,23 +1,18 @@
 import React from 'react';
-import {translate} from 'react-i18next';
-import PropTypes from 'prop-types';
 import s from './App.scss';
+import _ from 'lodash';
+import Row from '../Row';
 
-function App({t}) {
+function App() {
   return (
-    <div className={s.root}>
-      <div className={s.header}>
-        <h2>{t('app.title')}</h2>
+      <div className={s.root}>
+        <table>
+            <tbody>
+                { _.times(10, rowIndex => <Row key={rowIndex} rowIndex={rowIndex} />) }
+            </tbody>
+        </table>
       </div>
-      <p className={s.intro}>
-        {t('app.intro')}
-      </p>
-    </div>
   );
 }
 
-App.propTypes = {
-  t: PropTypes.func
-};
-
-export default translate(null, {wait: true})(App);
+export default App;
