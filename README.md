@@ -3,6 +3,11 @@
 We're going to create a simplified spreadsheet, using React & MobX.
 The spreadsheet will have a 10x10 table UI, and the user can input values in each cell, just like in excel.
 
+## Getting started
+- Fork this repository
+- Run ```yarn && yarn run start```
+- Open ```http://localhost:3000/```
+
 ## Requirements
 - Create the app's store. The store should hold the app's data & state, as well as the API to interact with the data.
 - Selecting a cell should display the selected cell's raw data in the formula input (simple value or formula)
