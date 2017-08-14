@@ -12,6 +12,10 @@ html, body {
   margin: 0 auto;
   text-align: center;
 
+  td, th {
+    box-sizing: border-box;
+  }
+
   th {
     font-weight: normal;
     font-size: 12px;
