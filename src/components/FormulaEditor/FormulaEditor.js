@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { computed, reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import s from './FormulaEditor.scss';
 import excelStore from '../../stores/excelStore';
@@ -35,6 +37,7 @@ class InputWithState extends React.Component {
     render() {
         return (
             <input type="text"
+                   disabled={this.props.disabled}
                    className={s.formulaInput}
                    onChange={this.onChange}
                    onKeyPress={this.onKeyPress}
@@ -46,17 +49,31 @@ class InputWithState extends React.Component {
 }
 
 InputWithState.propTypes = {
+    disabled: PropTypes.bool.isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func.isRequired
 };
 
-const FormulaEditor = () => (
-    <div className={s.formulaEditor}>
-        Formula:
-        <InputWithState value={excelStore.selectedCellData}
-                        onChange={(newData) => excelStore.setSelectedCellData(newData)}
-        />
-    </div>
-);
+class FormulaEditor extends React.Component {
+
+    constructor(props) {
+        super(props);
+        reaction(() => excelStore.selectedCell, () => ReactDOM.findDOMNode(this.refs.input).focus());
+        this.isFormulaInputEnabled = computed(() => !!excelStore.selectedCell, {name: 'isFormulaInputEnabled'});
+    }
+
+    render() {
+        return (
+            <div className={s.formulaEditor}>
+                Formula:
+                <InputWithState ref="input"
+                                value={excelStore.selectedCellData}
+                                onChange={(newData) => excelStore.setSelectedCellData(newData)}
+                                disabled={!this.isFormulaInputEnabled}
+                />
+            </div>
+        );
+    }
+}
 
 export default observer(FormulaEditor);
