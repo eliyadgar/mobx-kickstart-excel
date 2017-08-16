@@ -24,6 +24,7 @@
     "express-session": "^1.14.2",
     "husky": "^0.13.4",
     "jsdom-global": "^2.1.0",
+    "mobx-react-devtools": "^4.2.15",
     "react-test-renderer": "^15.5.4",
     "require-reload": "^0.2.2",
     "velocity": "^0.7.2",
